@@ -1,6 +1,6 @@
 <template>
     <div class="about">
-      <div class="image"><img src="undraw_code_review_re_woeb.svg"></div>
+      <div class="image"><img src="/undraw_code_review_re_woeb.svg"></div>
       <div class="aboutme">
         <p v-for="item, index in $t('aboutme').split('  ')" :key="index">{{ item }}</p>
       </div>
@@ -11,7 +11,7 @@
 .about {
     margin-top: 100px;
     height: calc(100vh - 100px);
-    background: url('bg-sect.svg');
+    background: url('/bg-sect.svg');
     background-size: cover;
     @apply w-full dark:bg-background-500 bg-white flex justify-center 2xl:items-end gap-5;
 }

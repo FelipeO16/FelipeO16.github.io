@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="image"><img class="w-3/6" src="undraw_hello_re_3evm.svg"></div>
+    <div class="image"><img class="w-3/6" src="/undraw_hello_re_3evm.svg"></div>
     <div class="hello" v-text="$t('hello')" />
     <div class="dev-text" v-text="$t('devText')" />
     <div class="welcome" v-text="$t('welcome')" />
