@@ -1,6 +1,6 @@
 <template>
       <header>
-          <img src="pexels-kevin-ku-577585.jpg" class="banner w-full">
+          <img src="/assets/pexels-kevin-ku-577585.jpg" class="banner w-full">
           <a href="#" class="logo">.Dev</a>
           <nav>
               <ul>
@@ -10,7 +10,6 @@
                   <li><a href="#">Portfolio</a></li>
                   <li><a href="#">Contato</a></li>
                   <li>
-
                       <HomeLang/>
                   </li>
               </ul>
