@@ -21,7 +21,6 @@
     "@formkit/nuxt": "^0.17.1",
     "@formkit/pro": "^0.112.1",
     "@nuxtjs/tailwindcss": "^6.7.0",
-    "@pinia/nuxt": "^0.4.10",
     "yarn": "^1.22.19"
   }
 }
