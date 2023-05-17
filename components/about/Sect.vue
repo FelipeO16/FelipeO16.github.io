@@ -1,7 +1,9 @@
 <template>
     <div class="about">
       <div class="image"><img src="/assets/undraw_code_review_re_woeb.svg"></div>
-      <div class="aboutme" v-html="$t('aboutme')" />
+      <div class="aboutme">
+        <p v-for="item, index in $t('aboutme').split('  ')" :key="index">{{ item }}</p>
+      </div>
     </div>
   </template>
   
