@@ -3,6 +3,13 @@ export default defineI18nConfig(() => ({
     locale: 'en',
     messages: {
       en: {
+        menu: {
+          home: 'Home',
+          about: 'About',
+          stacks: 'Stacks',
+          exps: 'Experience',
+          contact: 'Contact'
+        },
         hello:'Hello, im Felipe!',
         devText: 'FULLSTACK DEVELOPER',
         welcome: 'Welcome to my portfolio! This page was created to share a little bit about who I am and showcase my development skills.',
@@ -12,8 +19,15 @@ export default defineI18nConfig(() => ({
         back: 'Back to top'
       },
       pt: {
+        menu: {
+          home: 'Início',
+          about: 'Sobre',
+          stacks: 'Tecnologias',
+          exps: 'Experiencia',
+          contact: 'Contato'
+        },
         hello:'Olá, eu sou Felipe!',
-        devText: 'FULLSTACK DEVELOPER',
+        devText: 'DESENVOLVEDOR FULLSTACK',
         welcome: 'Bem vindo ao meu portfolio, esta pagina foi feita para falar um pouco sobre quem eu sou e também mostrar minhas habilidades no desenvolvimento!',
         start: 'Certo, Vamos começar a ver um pouco sobre mim?',
         yes: 'Sim, vamos lá.',

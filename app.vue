@@ -11,6 +11,9 @@
           <AboutSect />
       </section>
       <!-- <p>{{ $t('welcome') }}</p> -->
+      <section id="stacks">
+          <StacksSect />
+      </section>
     </div>
   </div>
 </template>
