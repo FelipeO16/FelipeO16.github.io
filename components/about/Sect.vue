@@ -21,6 +21,6 @@
 }
 
 .aboutme {
-    @apply text-sm px-10 py-2.5 self-center text-white text-left w-full lg:w-3/6 flex flex-col gap-4;
+    @apply text-sm px-10 py-2.5 self-center text-white text-left w-full lg:w-3/6 flex flex-col gap-4 h-full items-center justify-center ;
 }
 </style>
