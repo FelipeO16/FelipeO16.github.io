@@ -1,5 +1,12 @@
 export default {
   "en": {
+  "menu": {
+    "home": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Home"])},
+    "about": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["About"])},
+    "stacks": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Stacks"])},
+    "exps": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Experience"])},
+    "contact": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Contact"])}
+  },
   "hello": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Hello, im Felipe!"])},
   "devText": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["FULLSTACK DEVELOPER"])},
   "welcome": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Welcome to my portfolio! This page was created to share a little bit about who I am and showcase my development skills."])},
@@ -9,8 +16,15 @@ export default {
   "back": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Back to top"])}
 },
   "pt": {
+  "menu": {
+    "home": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Início"])},
+    "about": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Sobre"])},
+    "stacks": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Tecnologias"])},
+    "exps": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Experiencia"])},
+    "contact": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Contato"])}
+  },
   "hello": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Olá, eu sou Felipe!"])},
-  "devText": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["FULLSTACK DEVELOPER"])},
+  "devText": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["DESENVOLVEDOR FULLSTACK"])},
   "welcome": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Bem vindo ao meu portfolio, esta pagina foi feita para falar um pouco sobre quem eu sou e também mostrar minhas habilidades no desenvolvimento!"])},
   "start": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Certo, Vamos começar a ver um pouco sobre mim?"])},
   "yes": (ctx) => {const { normalize: _normalize } = ctx;return _normalize(["Sim, vamos lá."])},
