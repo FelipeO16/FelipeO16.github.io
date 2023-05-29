@@ -24,6 +24,6 @@ export default defineNuxtConfig({
     vueI18n: "./i18n.config.ts", // if you are using custom path, default
   },
   app: {
-    baseUrl: "./",
+    baseURL: "./",
   },
 });
