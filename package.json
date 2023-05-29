@@ -28,8 +28,5 @@
     "element-plus": "^2.3.5",
     "pinia": "^2.1.3",
     "yarn": "^1.22.19"
-  },
-  "overrides": {
-    "vue": "latest"
   }
 }
