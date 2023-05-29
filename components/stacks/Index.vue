@@ -31,7 +31,6 @@
 }
 
 .header {
-  background: url("test.svg");
   background-size: cover;
   @apply text-2xl font-bold w-full text-dark-secondary-500 text-center text-transparent;
 }
