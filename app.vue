@@ -1,42 +1,45 @@
 <template>
-  <div class="body">
-    <div class="test">
-      <HomeHeader />
-      <section id="home">
-          <!-- <HomeLang />
-          <DefaultBack /> -->
-          <HomeSect />
-      </section>
-      <section id="about">
-          <AboutSect />
-      </section>
-      <!-- <p>{{ $t('welcome') }}</p> -->
-      <section id="stacks">
-          <StacksSect />
-      </section>
-    </div>
+  <div class="body dark">
+    <!-- <HeaderMain /> -->
+    <section id="home">
+      <Home />
+    </section>
+    <section id="about">
+      <About />
+    </section>
+    <section id="stacks">
+      <Stacks />
+    </section>
   </div>
 </template>
 
-<style scoped>
+<script setup>
+const { locale } = useI18n();
+// do a useHead with darkmode by localstorage
+useHead({
+  script: [
+    `if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+        document.documentElement.removeAttribute("data-theme");
+    }`,
+  ],
+});
+</script>
+
+<style>
 html {
   scroll-behavior: smooth;
 }
-.body {
-  scroll-behavior: smooth;
-  @apply bg-primary-500
-}
-.test {
-  height: calc(100vh + 100px);
-  @apply bg-primary-500
-}
 
-#home {
-  padding-top: 100px;
+.body {
+  font-family: "Raleway", sans-serif;
+  @apply bg-light-background-500 dark:bg-dark-background-500 flex justify-center flex-col;
+  transition: all 0.3s ease-in-out;
 }
 
 section {
-  @apply w-full flex flex-col justify-start bg-primary-500
+  @apply w-full h-screen flex justify-center;
+  transition: all 0.3s ease-in-out;
 }
-
 </style>
