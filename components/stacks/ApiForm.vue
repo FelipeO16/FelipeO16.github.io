@@ -7,31 +7,74 @@
         <input type="text" v-model="api.selected" id="api-link" />
       </div>
       <button @click="api.getResponse(api.selected, locale)">
-        {{ $t("api.send") }} ►
+        {{ $t("api.send") }}
+        <span class="hidden sm:inline-block lg:hidden xl:inline-block">►</span>
       </button>
     </div>
     <div
-      class="request-stats flex justify-between items-center text-white w-3/6 px-4"
+      class="request-stats flex justify-between items-center text-white lg:px-4"
     >
-      <div class="request-stats flex w-2/4 justify-around">
+      <div class="requst-mobile">
+        <ClientOnly>
+          <el-menu
+            :default-active="activeIndex"
+            mode="horizontal"
+            background-color="#ffffff00"
+            :ellipsis="false"
+          >
+            <div class="flex-grow" />
+            <el-sub-menu index="2">
+              <template #title><span class="menu">Requests</span></template>
+              <el-menu-item index="2-1"
+                ><span class="dropdown-text" @click="api.selected = 'frontend'"
+                  >GET_frontend</span
+                ></el-menu-item
+              >
+              <el-menu-item index="2-2"
+                ><span class="dropdown-text" @click="api.selected = 'backend'"
+                  >GET_backend</span
+                ></el-menu-item
+              >
+              <el-menu-item index="2-3"
+                ><a href="#about" class="dropdown-text"
+                  >GET_aboutme</a
+                ></el-menu-item
+              >
+              <el-menu-item index="2-4"
+                ><a href="#contact" class="dropdown-text"
+                  >POST_contact</a
+                ></el-menu-item
+              >
+            </el-sub-menu>
+          </el-menu>
+        </ClientOnly>
+      </div>
+      <div class="request-status">
         <div
           class="request-status-text"
           :class="api.isError ? 'bg-red-500' : 'bg-green-500'"
         >
           {{ api.isError ? "404 NF" : "200 OK" }}
         </div>
+        <div class="request-response">
+          <div class="request-response-text">253 ms</div>
+        </div>
         <div class="request-size">
-          <div class="request-size-text">253 ms</div>
+          <div class="request-size-text">1647 B</div>
         </div>
-        <div class="request-time">
-          <div class="request-time-text">1647 B</div>
-        </div>
+      </div>
+
+      <div
+        class="request-time justify-end items-center h-full text-xl hidden lg:flex w-2/4"
+      >
+        <div class="request-time-text font-mono">1m Ago</div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { ArrowDown } from "@element-plus/icons-vue";
 import { useApiStore } from "@/stores/api";
 let api = useApiStore();
 const { locale } = useI18n();
@@ -44,7 +87,7 @@ const { locale } = useI18n();
 
 .api-form {
   background-color: #161616;
-  @apply w-full h-14 flex border-b border-dark-primary-500;
+  @apply w-full h-1/6 lg:h-20 flex flex-col lg:flex-row border-b border-dark-primary-500;
 }
 
 .method {
@@ -55,7 +98,7 @@ const { locale } = useI18n();
 }
 
 .input {
-  @apply w-2/5 h-full flex items-center text-white justify-start gap-4;
+  @apply w-full lg:w-2/5 h-full flex items-center text-white justify-start gap-4 text-sm;
 }
 
 input,
@@ -81,10 +124,29 @@ button {
 }
 
 .request-status-text {
-  @apply p-2  rounded-md;
+  @apply p-2 lg:p-2  rounded-md text-xs xl:text-lg;
 }
-.request-size-text,
-.request-time-text {
-  @apply bg-gray-500 p-2 rounded-md;
+.request-response-text,
+.request-size-text {
+  @apply bg-gray-500 p-2 lg:p-2 rounded-md text-xs xl:text-lg;
+}
+
+.request-stats {
+  @apply flex w-full lg:w-3/5 h-3/6 lg:h-full items-center;
+}
+
+.request-status {
+  @apply flex w-4/6 gap-4 font-mono;
+}
+
+.requst-mobile {
+  @apply w-2/6 flex justify-center items-center;
+}
+.el-menu,
+.el-menu--horizontal {
+  @apply block border-none lg:hidden;
+}
+.menu {
+  @apply w-full h-full text-sm text-white;
 }
 </style>

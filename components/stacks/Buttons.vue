@@ -39,21 +39,21 @@ const api = useApiStore();
 
 <style scoped>
 .requests {
-  @apply flex flex-col items-center gap-8 p-4;
+  @apply flex flex-col items-center gap-8 p-4 w-full;
 }
 
 .btn-get {
-  @apply w-11/12 h-20 flex rounded-xl border-l-2 border-dark-primary-500 px-2 items-center gap-8;
+  @apply w-11/12 h-20 flex rounded-xl border-l-2 border-dark-primary-500 px-2 items-center gap-8 pl-4;
 }
 .btn-post {
-  @apply w-11/12 h-20 flex rounded-xl border-l-2 border-sky-500 px-2 items-center gap-8;
+  @apply w-11/12 h-20 flex rounded-xl border-l-2 border-sky-500 px-2 items-center gap-8 pl-4;
 }
 
 .get {
-  @apply text-2xl text-dark-primary-500 font-bold mx-4;
+  @apply text-2xl text-dark-primary-500 font-bold w-1/6;
 }
 .post {
-  @apply text-2xl text-sky-500 font-bold mx-4;
+  @apply text-2xl text-sky-500 font-bold  w-1/6;
 }
 
 .text {

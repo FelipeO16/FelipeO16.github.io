@@ -21,7 +21,7 @@ const api = useApiStore();
 }
 
 ::-webkit-scrollbar {
-  @apply h-2;
+  @apply h-2 w-2;
 }
 
 /* Track */

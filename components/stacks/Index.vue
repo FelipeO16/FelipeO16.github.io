@@ -32,19 +32,19 @@
 
 .header {
   background-size: cover;
-  @apply text-2xl font-bold w-full text-dark-secondary-500 text-center text-transparent;
+  @apply text-2xl font-bold  w-full text-dark-secondary-500 text-center text-transparent;
 }
 
 .content {
-  @apply w-full h-full flex justify-center items-center bg-dark-background-500 dark:bg-neutral-900 rounded-b-lg;
+  @apply w-full h-5/6 lg:h-full flex justify-center items-center bg-dark-background-500 dark:bg-neutral-900 rounded-b-lg;
 }
 
 .left-side {
-  @apply w-2/5 h-full border-r border-dark-primary-500;
+  @apply w-2/5 h-full max-h-full border-r border-dark-primary-500 hidden lg:flex;
 }
 
 .right-side {
-  @apply w-3/5 h-full;
+  @apply w-full  h-full lg:w-3/5;
 }
 </style>
 
