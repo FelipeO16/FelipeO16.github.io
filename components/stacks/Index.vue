@@ -27,7 +27,7 @@
 
 .stacks {
   height: calc(100% - 80px);
-  @apply flex flex-col items-center w-10/12 py-8 px-4;
+  @apply flex flex-col items-center w-full lg:w-10/12 py-8 px-4;
 }
 
 .header {

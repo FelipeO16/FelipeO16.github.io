@@ -13,7 +13,7 @@
         :ellipsis="false"
         @select="handleSelect"
       >
-        <el-menu-item index="0"><HeaderLogo /></el-menu-item>
+        <el-menu-item index="0" class="p-0"><HeaderLogo /></el-menu-item>
         <div class="flex-grow" />
         <el-sub-menu index="2">
           <template #title><span class="menu">Menu</span></template>
@@ -52,7 +52,7 @@
 <style scoped>
 .header,
 .header-content {
-  @apply w-full h-20 justify-between px-8 bg-transparent bg-light-background-500 dark:bg-dark-background-500 top-0;
+  @apply w-full h-20 justify-between xl:px-8 bg-transparent bg-light-background-500 dark:bg-dark-background-500 top-0;
   transition: all 0.3s ease-in-out;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .mobile {
-  @apply flex xl:hidden bg-transparent;
+  @apply flex w-screen xl:hidden bg-transparent;
 }
 
 .menu:hover {
