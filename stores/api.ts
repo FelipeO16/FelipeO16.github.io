@@ -7,6 +7,7 @@ export const useApiStore = defineStore("api", {
     last_area: "",
     selected: "",
     error: false,
+    text: "",
     responses: {
       frontend: {
         pt: "/frontend_pt",
@@ -26,8 +27,12 @@ export const useApiStore = defineStore("api", {
     status: (state) => state.response,
     selectedStack: (state) => state.selected,
     isError: (state) => state.error,
+    getText: (state) => state.text,
   },
   actions: {
+    setText(text: string) {
+      this.text = text;
+    },
     async getResponse(param: string, lang: string) {
       if (this.responses[param] && this.responses[param][lang]) {
         this.error = false;

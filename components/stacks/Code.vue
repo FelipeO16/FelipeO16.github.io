@@ -19,6 +19,22 @@ const api = useApiStore();
 .content-doc {
   @apply w-full h-full;
 }
+
+::-webkit-scrollbar {
+  @apply h-2;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 30px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-primary-500 rounded-lg;
+}
+
 pre {
   line-height: normal;
   word-break: break-all;

@@ -10,12 +10,14 @@
         {{ $t("api.send") }} ►
       </button>
     </div>
-    <!-- do a request status with status, size and response time box -->
     <div
       class="request-stats flex justify-between items-center text-white w-3/6 px-4"
     >
-      <div class="request-stats flex w-1/3 justify-around">
-        <div class="request-status-text">
+      <div class="request-stats flex w-2/4 justify-around">
+        <div
+          class="request-status-text"
+          :class="api.isError ? 'bg-red-500' : 'bg-green-500'"
+        >
           {{ api.isError ? "404 NF" : "200 OK" }}
         </div>
         <div class="request-size">
@@ -39,6 +41,7 @@ const { locale } = useI18n();
 * {
   letter-spacing: 0.05em;
 }
+
 .api-form {
   background-color: #161616;
   @apply w-full h-14 flex border-b border-dark-primary-500;
@@ -75,5 +78,13 @@ input:-webkit-autofill:active {
 button {
   font-family: "Raleway";
   @apply p-2 h-full bg-dark-primary-500 w-3/12 font-medium;
+}
+
+.request-status-text {
+  @apply p-2  rounded-md;
+}
+.request-size-text,
+.request-time-text {
+  @apply bg-gray-500 p-2 rounded-md;
 }
 </style>
